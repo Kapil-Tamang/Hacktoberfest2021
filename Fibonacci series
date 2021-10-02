@@ -1,20 +1,30 @@
-
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
-int fibb(int n)
+int fibonacci(int n)
 {
-	if (n <= 1)
-		return n;
-	return fibb(n-1) + fibb(n-2);
+    if((n==1)||(n==0))
+    {
+        return(n);
+    }
+    else
+    {
+        return(fibonacci(n-1)+fibonacci(n-2));
+    }
 }
-
-int main ()
+int main()
 {
-	int n;
-  cin >> n;
-	cout << fibb(n);
-	getchar();
-	return 0;
+    int n,i=0;
+    
+    cout<<"Input the number of terms for Fibonacci Series:";
+    cin>>n;
+    
+    cout<<"\nFibonnaci Series is as follows\n";
+    
+    while(i<n)
+    {
+        cout<<fibonacci(i)<<" ";
+        i++;
+    }
+    return 0;
 }
-
