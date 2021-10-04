@@ -1,19 +1,21 @@
 #include<iostream>
 using namespace std;
 
-int main(){
-	int arr[10];
-	int i,max,temp,n;
-	cin >> n;
-	for(i=0;i<n;i++){
-		cin >> arr[i];
+int main()
+{
+	int n,i,sum=0;
+	cin>> n;
+	int arr[n];
+	for(i=0;i<=n-1;i++)
+	{
+		cin>> arr[i];
+	}		
+	for(i=0;i<=n-1;i++)
+	{
+		sum+=arr[i];
 	}
-	for(i=0;i<n;i++){
-		int j,curr=0;
-		for(j=i;j<n;j++){
-			curr += arr[j];
-			cout<<curr<<endl;
-		}
-	}
-}
+	float avg=(float)sum/n;
 	
+	cout<< The sum of the array is<< sum<< and the average is<< avg;
+	return 0;
+}
